@@ -1,0 +1,35 @@
+body {
+  margin: 0 25%;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#header {
+  height: 20px;
+  background-color: #000070;
+}
+
+.header-nav {
+  float: left;
+  width: 33.33%;
+  background-color: blue;
+}
+
+.header-nav a {
+  padding: 10%;
+  text-decoration: none;
+  text-align: center;
+  color: yellow;
+}
+
+.header-nav a:hover {
+  color: red;
+}
+
+#body {
+  margin-top: ;
+}
+
+.example-entry {
+  border: 1px solid red;
+}
