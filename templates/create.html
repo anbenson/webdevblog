@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Create a Post</title>
+{% endblock %}
+
+{% block body %}
+        <div class="body-header">
+          <h1>New Blog Entry</h1>
+          <p>
+            <em>
+              Share your thoughts with the world.
+            </em>
+          </p>
+        </div>
+        <div class="create-form">
+          <form method="post" action="/newpost">
+            <p>Enter a title for your post:</p>
+            <input class="create-title" type="text" name="post-title" placeholder="New Post" />
+            <p>Write your thoughts below:</p>
+            <textarea class="create-text" name="post-text" placeholder="I'm a webdev hax0r"></textarea>
+            <br />
+            <br />
+            <input class="create-submit" type="submit" value="Create Post" />
+          </form>
+        </div>
+{% endblock %}

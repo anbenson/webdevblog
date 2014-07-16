@@ -33,3 +33,16 @@ body {
 .example-entry {
   border: 1px solid red;
 }
+
+.create-form {
+  border: 1px solid purple;
+}
+
+.create-title {
+  width: 90%;
+}
+
+.create-text {
+  width: 90%;
+  height: 10em;
+}

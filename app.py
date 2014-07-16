@@ -7,6 +7,10 @@ SET_DEBUG = True
 def home():
   return render_template("index.html")
 
+@app.route("/create")
+def create():
+  return render_template("create.html")
+
 @app.errorhandler(404)
 def page_not_found(error):
   return render_template("error404.html"), 404
