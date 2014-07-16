@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="../static/base.css">
-    <title>__The Everyman Blog__</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="base.css")}}">
+    {% block head %}{% endblock %}
   </head>
   <body>
     <div id="header">
@@ -20,59 +20,7 @@
     </div>
     <div id="body">
       <div id="body-content">
-        <div id="body-header">
-          <h1>The Everyman Blog</h1>
-          <p>
-            <em>
-              I came, I saw, I coded
-            </em>
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
+        {% block body %}{% endblock %}
       </div>
     </div>
   </body>

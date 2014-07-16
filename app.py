@@ -5,7 +5,7 @@ SET_DEBUG = True
 
 @app.route("/")
 def home():
-  return render_template("base.html")
+  return render_template("index.html")
 
 @app.errorhandler(404)
 def page_not_found(error):
