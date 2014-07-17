@@ -42,7 +42,7 @@ def createPost(author, title, text):
 # routing
 @app.route("/")
 def home():
-  # first query the database for blog entries
+  # query the database for blog entries
   blogEntries = BlogEntry.query.order_by(BlogEntry.date.desc())
   return render_template("index.html", blogEntries=blogEntries)
 
@@ -64,6 +64,15 @@ def newpost():
     db.session.add(post)
     db.session.commit()
     return redirect(url_for("home"))
+
+@app.route("/post/<int:postId>")
+def permapost(postId):
+  # query database for specified post
+  blogEntry = BlogEntry.query.filter_by(ID=postId).first()
+  if blogEntry:
+    return render_template("entry.html", entry=blogEntry)
+  return render_template("error404.html"), 404
+
 
 @app.errorhandler(404)
 def page_not_found(error):

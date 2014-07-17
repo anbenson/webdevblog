@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Post {{ entry.ID }}</title>
+{% endblock %}
+
+{% block body %}
+        <div class="blog-entry">
+          <div class="entry-header">
+            <h2 class="entry-title">{{ entry.title }}</h2>
+            <p class="entry-author">{{ entry.author }}</p>
+            <span class="entry-date">{{ entry.date }}</span>
+          </div>
+          <p class="entry-description">{{ entry.text }}</p>
+        </div>
+{% endblock %}

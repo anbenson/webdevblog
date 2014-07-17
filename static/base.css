@@ -39,6 +39,15 @@ body {
   text-align: center;
 }
 
+.entry-title a {
+  text-decoration: none;
+  color: blue;
+}
+
+.entry-title a:hover {
+  color: green;
+}
+
 .create-form {
   border: 1px solid purple;
 }
