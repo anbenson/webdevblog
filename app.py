@@ -5,7 +5,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/test.db"
-app.debug = True
+app.debug = False
 
 db = SQLAlchemy(app)
 
