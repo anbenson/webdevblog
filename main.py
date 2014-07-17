@@ -1,12 +1,13 @@
 from datetime import datetime
-
 from flask import Flask, render_template, request, redirect, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 
+# app configuration
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/test.db"
 app.debug = False
 
+# db configuration
 db = SQLAlchemy(app)
 
 class BlogEntry(db.Model):
@@ -27,6 +28,7 @@ class BlogEntry(db.Model):
 
 db.create_all()
 
+# helper functions
 def createPost(author, title, text):
   '''
   Creates a BlogEntry if given valid parameters, else return None.
@@ -37,6 +39,7 @@ def createPost(author, title, text):
     return BlogEntry(author, title, text)
   return None
 
+# routing
 @app.route("/")
 def home():
   # first query the database for blog entries
@@ -66,5 +69,6 @@ def newpost():
 def page_not_found(error):
   return render_template("error404.html"), 404
 
+# actual calls
 if __name__ == "__main__":
   app.run()
