@@ -13,49 +13,14 @@
             </em>
           </p>
         </div>
-        <div class="example-entry">
+        {% for entry in blogEntries %}
+        <div class="blog-entry">
           <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
+            <h2 class="entry-title">{{ entry.title }}</h2>
+            <p class="entry-author">{{ entry.author }}</p>
+            <span class="entry-date">{{ entry.date }}</span>
           </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
+          <p class="entry-description">{{ entry.text }}</p>
         </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
-        <div class="example-entry">
-          <div class="entry-header">
-            <h2 class="entry-title">SSB Thoughts</h2>
-            <span class="entry-date">2:02 AM 7/15/2014</span>
-          </div>
-          <p class="entry-description">
-            I watched the new character reveal this morning...whaaaat?
-          </p>
-        </div>
+        {% endfor %}
 {% endblock %}

@@ -30,8 +30,13 @@ body {
   margin-top: ;
 }
 
-.example-entry {
+.blog-entry {
   border: 1px solid red;
+}
+
+.entry-description {
+  padding: 0 10%;
+  text-align: center;
 }
 
 .create-form {
