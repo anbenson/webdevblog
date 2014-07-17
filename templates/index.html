@@ -2,14 +2,26 @@
 
 {% block head %}
     <title>The Everyman Blog</title>
+    <script type="text/javascript">
+      var quotes = ["I came, I saw, I coded",
+                    "No users, Firefox only, Flask disorientation",
+                    "Equality for all browsers, except IE6-",
+                    "Le blog, c'est moi",
+                    "Where no entries are more equal than yours"];
+      function getQuote() {
+        return quotes[Math.floor(quotes.length*Math.random())];
+      }
+      window.onload = function() {
+        document.getElementById("quote").innerHTML = getQuote();
+      }
+    </script>
 {% endblock %}
 
 {% block body %}
         <div class="body-header">
           <h1>The Everyman Blog</h1>
           <p>
-            <em>
-              I came, I saw, I coded
+            <em id="quote">
             </em>
           </p>
         </div>
