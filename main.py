@@ -65,10 +65,6 @@ def newpost():
     db.session.commit()
     return redirect(url_for("home"))
 
-@app.errorhandler(404)
-def page_not_found(error):
-  return render_template("error404.html"), 404
-
 # actual calls
 if __name__ == "__main__":
   app.run()
