@@ -46,6 +46,10 @@ def home():
   blogEntries = BlogEntry.query.order_by(BlogEntry.date.desc())
   return render_template("index.html", blogEntries=blogEntries)
 
+@app.route("/about")
+def about():
+  return render_template("about.html")
+
 @app.route("/create")
 def create():
   return render_template("create.html")
