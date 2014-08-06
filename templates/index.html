@@ -2,6 +2,8 @@
 
 {% block head %}
     <title>The Everyman Blog</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='toggling.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -14,11 +16,26 @@
         {% for entry in blogEntries %}
         <div class="blog-entry">
           <div class="entry-header">
-             <h2 class="entry-title">{{ entry.title }}</h2>
-            <p class="entry-author">{{ entry.author }}</p>
-            <span class="entry-date">{{ entry.date }}</span>
+            <div class="entry-title">
+              <h2>{{ entry.title }}</h2>
+            </div>
+            <div class="entry-metadata">
+              <div class="entry-author">
+                <p class="entry-author">{{ entry.author }}</p>
+              </div>
+              <div class="entry-date">
+                <p class="entry-date">{{ entry.date.strftime("%I:%M %p %b %d, %Y") }}</p>
+              </div>
+            </div>
           </div>
-          <p class="entry-description">{{ entry.text }}</p>
+          <div class="entry-content">
+            <p class="entry-description">{{ entry.text }}</p>
+          </div>
+          <div class="entry-toggle">
+            <p>
+              click here to show/hide
+            </p>
+          </div>
         </div>
         {% endfor %}
 {% endblock %}
