@@ -21,7 +21,7 @@ class BlogEntry(db.Model):
     self.author = author
     self.title = title
     self.text = text
-    self.date = datetime.now()
+    self.date = datetime.utcnow()
 
   def __repr__(self):
     return "POST %s by %s on %s" %(self.title, self.author, self.date)
