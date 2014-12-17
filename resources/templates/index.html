@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title>The Everyman Blog</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='toggling.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+        <div class="body-header">
+          <h1>The Everyman Blog</h1>
+          <em>
+            the WebDevWeeks sample blog
+          </em>
+        </div>
+        <div class="blog-entry">
+          <div class="entry-header">
+            <div class="entry-title">
+              <h2>A Sample Blog Entry Title</h2>
+            </div>
+            <div class="entry-metadata">
+              <div class="entry-author">
+                <p class="entry-author">Too Hipster to be an Author</p>
+              </div>
+              <div class="entry-date">
+                <p class="entry-date">Date: 04/01/2014</p>
+              </div>
+            </div>
+          </div>
+          <div class="entry-content">
+            <p class="entry-description">
+              Deep v pickled food truck lo-fi sustainable. Gentrify XOXO Etsy pickled. Bespoke Pitchfork direct trade jean shorts. Odd Future Cosby sweater tofu Banksy. Normcore viral American Apparel, readymade ethnic chillwave biodiesel fashion axe brunch Neutra Echo Park mlkshk locavore seitan before they sold out. Normcore Portland whatever, forage mumblecore squid Tonx swag messenger bag art party meh butcher master cleanse. Cornhole squid fingerstache mumblecore.
+
+              Etsy trust fund meh twee post-ironic leggings. Narwhal flexitarian DIY selvage beard, PBR Etsy art party twee ugh. Semiotics tousled keffiyeh, hoodie YOLO lomo post-ironic cardigan typewriter church-key Marfa Bushwick cornhole meh. Schlitz mumblecore kale chips, stumptown vegan VHS gentrify normcore squid. Actually aesthetic Intelligentsia gentrify. Williamsburg disrupt shabby chic, tote bag Truffaut Austin butcher drinking vinegar hashtag gastropub banh mi locavore Schlitz fixie. Viral hella Echo Park, paleo Cosby sweater try-hard synth hashtag shabby chic cray organic Shoreditch.
+            </p>
+          </div>
+          <div class="entry-toggle">
+            <p>
+              click here to show/hide
+            </p>
+          </div>
+        </div>
+{% endblock %}

@@ -1,17 +1,13 @@
-webdevblog-example
+webdevblog
 ==================
 
-The example webdevblog for the server-side programming session for ScottyLabs' WebDevWeeks.
+A simple blog written in Python and Flask with a SQLite backend. Check it out at webdevblog.herokuapp.com, but note that since Heroku clears out local storage (including our SQLite database) a couple times a day, blog posts won't persist for very long.
 
-This repo is NOT for students in the WebDevWeeks session - there is a separate repo for that, and we'll probably have a zip file for you to download in a separate location.
-
-This repo, in addition to the filled out files for WebDevWeeks, includes files for Heroku, like the Procfile.
-
-You can find this website hosted at webdevblog.herokuapp.com. Beware that since this blog uses SQLite, which is stored locally, and because Heroku likes to clear out local storage around once a day, blog posts won't persist for very long.
+This was written for the Fall 2014 edition of WebDevWeeks, a ScottyLabs event created to teach the CMU community about web development. Students in the server-side programming session wrote a blog very similar to this one. The starter code and the handouts for the event can be found in the 'resources' folder in the repository.
 
 Steps to run:
-- git clone git@github.com:anbenson/webdevblog-example.git
-- cd webdevblog-example
+- git clone git@github.com:anbenson/webdevblog.git
+- cd webdevblog
 - pip install -r requirements.txt
 - python main.py
 - go to localhost:5000
